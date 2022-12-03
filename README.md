@@ -4,6 +4,7 @@ Is a hotel room booking Cardano ADA smart contract created using Marlowe and Blo
 * Option 2. Book standard room with breakfast included. ₳ 0.000120
 * Option 3. Book luxury room includes breakfast. ₳ 0.000150
 - Created using: https://play.marlowe-finance.io/
+- Help from: https://docs.cardano.org/marlowe/learn-about-marlowe/
 ## Example of when the Smart Contract has been executed:
 ```
 TRANSACTION LOG
