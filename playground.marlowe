@@ -1,0 +1,96 @@
+When
+    [Case
+        (Choice
+            (ChoiceId
+                "Book Room"
+                (Role "Guest")
+            )
+            [Bound 1 3]
+        )
+        (If
+            (ValueEQ
+                (ChoiceValue
+                    (ChoiceId
+                        "Book Room"
+                        (Role "Guest")
+                    ))
+                (Constant 1)
+            )
+            (When
+                [Case
+                    (Deposit
+                        (Role "Guest")
+                        (Role "Guest")
+                        (Token "" "")
+                        (Constant 90)
+                    )
+                    (Pay
+                        (Role "Guest")
+                        (Party (Role "Hotel"))
+                        (Token "" "")
+                        (Constant 90)
+                        Close 
+                    )]
+                (TimeParam "Booking Date")
+                Close 
+            )
+            (If
+                (ValueEQ
+                    (ChoiceValue
+                        (ChoiceId
+                            "Book Room"
+                            (Role "Guest")
+                        ))
+                    (Constant 2)
+                )
+                (When
+                    [Case
+                        (Deposit
+                            (Role "Guest")
+                            (Role "Guest")
+                            (Token "" "")
+                            (Constant 120)
+                        )
+                        (Pay
+                            (Role "Guest")
+                            (Party (Role "Hotel"))
+                            (Token "" "")
+                            (Constant 120)
+                            Close 
+                        )]
+                    (TimeParam "Booking Date")
+                    Close 
+                )
+                (If
+                    (ValueEQ
+                        (ChoiceValue
+                            (ChoiceId
+                                "Book Room"
+                                (Role "Guest")
+                            ))
+                        (Constant 3)
+                    )
+                    (When
+                        [Case
+                            (Deposit
+                                (Role "Guest")
+                                (Role "Guest")
+                                (Token "" "")
+                                (Constant 150)
+                            )
+                            (Pay
+                                (Role "Guest")
+                                (Party (Role "Hotel"))
+                                (Token "" "")
+                                (Constant 150)
+                                Close 
+                            )]
+                        (TimeParam "Booking Date")
+                        Close 
+                    )
+                    Close 
+                )
+            )
+        )]
+    (TimeParam "Booking Date")
+    Close 
